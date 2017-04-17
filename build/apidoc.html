@@ -1,0 +1,2455 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/benjamind/google-sheets"
+
+    >google-sheets (v0.0.7)</a>
+</h1>
+<h4>Read and modify Google Spreadsheets</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-sheets">module google-sheets</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Cells">
+            function <span class="apidocSignatureSpan">google-sheets.</span>Cells
+            <span class="apidocSignatureSpan">(data, authId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Rows">
+            function <span class="apidocSignatureSpan">google-sheets.</span>Rows
+            <span class="apidocSignatureSpan">(data, authId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Spreadsheet">
+            function <span class="apidocSignatureSpan">google-sheets.</span>Spreadsheet
+            <span class="apidocSignatureSpan">(meta, authId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Worksheet">
+            function <span class="apidocSignatureSpan">google-sheets.</span>Worksheet
+            <span class="apidocSignatureSpan">(meta, authId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.auth">
+            function <span class="apidocSignatureSpan">google-sheets.</span>auth
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.getSpreadsheet">
+            function <span class="apidocSignatureSpan">google-sheets.</span>getSpreadsheet
+            <span class="apidocSignatureSpan">(key, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.list">
+            function <span class="apidocSignatureSpan">google-sheets.</span>list
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.logout">
+            function <span class="apidocSignatureSpan">google-sheets.</span>logout
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.parseSheet">
+            function <span class="apidocSignatureSpan">google-sheets.</span>parseSheet
+            <span class="apidocSignatureSpan">(entry)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.query">
+            function <span class="apidocSignatureSpan">google-sheets.</span>query
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-sheets.</span>Cells.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-sheets.</span>Rows.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-sheets.</span>Spreadsheet.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-sheets.</span>Worksheet.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">google-sheets.</span>authId</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-sheets.Cells">module google-sheets.Cells</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Cells.Cells">
+            function <span class="apidocSignatureSpan">google-sheets.</span>Cells
+            <span class="apidocSignatureSpan">(data, authId)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-sheets.Cells.prototype">module google-sheets.Cells.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Cells.prototype.forEach">
+            function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>forEach
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Cells.prototype.getCell">
+            function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>getCell
+            <span class="apidocSignatureSpan">(row, col)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Cells.prototype.getCells">
+            function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>getCells
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Cells.prototype.getRow">
+            function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>getRow
+            <span class="apidocSignatureSpan">(row)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Cells.prototype.getRows">
+            function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>getRows
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Cells.prototype.numbersToLetters">
+            function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>numbersToLetters
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Cells.prototype.parse">
+            function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>parse
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Cells.prototype.parseEntry">
+            function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>parseEntry
+            <span class="apidocSignatureSpan">(entry)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Cells.prototype.query">
+            function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>query
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Cells.prototype.update">
+            function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>update
+            <span class="apidocSignatureSpan">(cells, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-sheets.Rows">module google-sheets.Rows</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Rows.Rows">
+            function <span class="apidocSignatureSpan">google-sheets.</span>Rows
+            <span class="apidocSignatureSpan">(data, authId)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-sheets.Rows.prototype">module google-sheets.Rows.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Rows.prototype.create">
+            function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>create
+            <span class="apidocSignatureSpan">(row, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Rows.prototype.forEach">
+            function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>forEach
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Rows.prototype.getRow">
+            function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>getRow
+            <span class="apidocSignatureSpan">(index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Rows.prototype.getRows">
+            function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>getRows
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Rows.prototype.parse">
+            function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>parse
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Rows.prototype.parseEntry">
+            function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>parseEntry
+            <span class="apidocSignatureSpan">(entry)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Rows.prototype.query">
+            function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>query
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Rows.prototype.remove">
+            function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>remove
+            <span class="apidocSignatureSpan">(row, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Rows.prototype.save">
+            function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>save
+            <span class="apidocSignatureSpan">(row, options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-sheets.Spreadsheet">module google-sheets.Spreadsheet</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Spreadsheet.Spreadsheet">
+            function <span class="apidocSignatureSpan">google-sheets.</span>Spreadsheet
+            <span class="apidocSignatureSpan">(meta, authId)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-sheets.Spreadsheet.prototype">module google-sheets.Spreadsheet.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Spreadsheet.prototype.addWorksheet">
+            function <span class="apidocSignatureSpan">google-sheets.Spreadsheet.prototype.</span>addWorksheet
+            <span class="apidocSignatureSpan">(data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Spreadsheet.prototype.deleteWorksheet">
+            function <span class="apidocSignatureSpan">google-sheets.Spreadsheet.prototype.</span>deleteWorksheet
+            <span class="apidocSignatureSpan">(worksheet, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Spreadsheet.prototype.getWorksheet">
+            function <span class="apidocSignatureSpan">google-sheets.Spreadsheet.prototype.</span>getWorksheet
+            <span class="apidocSignatureSpan">(name, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Spreadsheet.prototype.getWorksheetAt">
+            function <span class="apidocSignatureSpan">google-sheets.Spreadsheet.prototype.</span>getWorksheetAt
+            <span class="apidocSignatureSpan">(index, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Spreadsheet.prototype.getWorksheets">
+            function <span class="apidocSignatureSpan">google-sheets.Spreadsheet.prototype.</span>getWorksheets
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Spreadsheet.prototype.query">
+            function <span class="apidocSignatureSpan">google-sheets.Spreadsheet.prototype.</span>query
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-sheets.Worksheet">module google-sheets.Worksheet</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Worksheet.Worksheet">
+            function <span class="apidocSignatureSpan">google-sheets.</span>Worksheet
+            <span class="apidocSignatureSpan">(meta, authId)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-sheets.Worksheet.prototype">module google-sheets.Worksheet.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Worksheet.prototype.create">
+            function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>create
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Worksheet.prototype.createXML">
+            function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>createXML
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Worksheet.prototype.getCells">
+            function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>getCells
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Worksheet.prototype.getRows">
+            function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>getRows
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Worksheet.prototype.getTitle">
+            function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>getTitle
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Worksheet.prototype.parseJSON">
+            function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>parseJSON
+            <span class="apidocSignatureSpan">(entry)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Worksheet.prototype.query">
+            function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>query
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Worksheet.prototype.remove">
+            function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>remove
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Worksheet.prototype.save">
+            function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>save
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Worksheet.prototype.saveXML">
+            function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>saveXML
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Worksheet.prototype.set">
+            function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>set
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.Worksheet.prototype.setTitle">
+            function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>setTitle
+            <span class="apidocSignatureSpan">(title)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.google-sheets.auth">module google-sheets.auth</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.google-sheets.auth.authorize">
+            function <span class="apidocSignatureSpan">google-sheets.auth.</span>authorize
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-sheets" id="apidoc.module.google-sheets">module google-sheets</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Cells" id="apidoc.element.google-sheets.Cells">
+        function <span class="apidocSignatureSpan">google-sheets.</span>Cells
+        <span class="apidocSignatureSpan">(data, authId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cells(data, authId) {
+	this.authId = authId;
+	this.cells = [];
+	this.colToHeaderMap = {};
+	this.headerToColMap = {};
+	this.rows = {};
+	this.parse(data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Rows" id="apidoc.element.google-sheets.Rows">
+        function <span class="apidocSignatureSpan">google-sheets.</span>Rows
+        <span class="apidocSignatureSpan">(data, authId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Rows(data, authId) {
+	this.authId = authId;
+	this.rows = [];
+	this.parse(data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Spreadsheet" id="apidoc.element.google-sheets.Spreadsheet">
+        function <span class="apidocSignatureSpan">google-sheets.</span>Spreadsheet
+        <span class="apidocSignatureSpan">(meta, authId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Spreadsheet(meta, authId) {
+	this.meta = meta;
+	this.authId = authId;
+	this.worksheets = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Worksheet" id="apidoc.element.google-sheets.Worksheet">
+        function <span class="apidocSignatureSpan">google-sheets.</span>Worksheet
+        <span class="apidocSignatureSpan">(meta, authId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Worksheet(meta, authId) {
+	this.meta = meta;
+	this.authId = authId;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.auth" id="apidoc.element.google-sheets.auth">
+        function <span class="apidocSignatureSpan">google-sheets.</span>auth
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">auth = function (params, callback) {
+		authorize(params, function(err, value) {
+			if (err) {
+				return callback(err,value);
+			}
+			this.authId = value;
+			callback(null, this.authId);
+		}.bind(this));
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## How to use
+
+```javascript
+var gsheets = require(&#x27;google-sheets&#x27;);
+
+// authorize your account
+gsheets.<span class="apidocCodeKeywordSpan">auth</span>({
+	email: &#x3c;YOUR GOOGLE USERNAME&#x3e;,
+	password: &#x3c;YOUR GOOGLE PASS&#x3e;
+}, function(err) {
+	if (err) {
+		throw err;
+
+		// list spreadsheets in the account
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.getSpreadsheet" id="apidoc.element.google-sheets.getSpreadsheet">
+        function <span class="apidocSignatureSpan">google-sheets.</span>getSpreadsheet
+        <span class="apidocSignatureSpan">(key, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSpreadsheet = function (key, callback) {
+		// creates a spreadsheet object, having first confirmed the sheet exists
+		//try and get the url
+		if (!this.authId) {
+			return callback(&#x27;auth required&#x27;);
+		}
+		var sheetUrl = makeUrl(&#x27;spreadsheets&#x27;,key), that = this;
+		this.query({
+			url: sheetUrl
+		},function(err, result) {
+			if (err) {
+				return callback(err);
+			}
+			if (!result) {
+				return callback(null,null);
+			}
+			// assume it worked, parse the spreadsheet
+			callback(null, that.parseSheet(result.entry));
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+		// list spreadsheets in the account
+		gsheets.list(function(err, sheets) {
+			// sheets is an array of Spreadsheet objects
+		});
+
+		// load a specific sheet
+		gsheets.<span class="apidocCodeKeywordSpan">getSpreadsheet</span>(&#x3c;YOUR SPREADSHEET KEY HERE&#x3e;, function(err, sheet) {
+			if (err) {
+				throw err;
+			}
+
+			// sheet is a Spreadsheet object....lets list all its worksheets
+			sheet.getWorksheets(function(err, worksheets) {
+				if (err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.list" id="apidoc.element.google-sheets.list">
+        function <span class="apidocSignatureSpan">google-sheets.</span>list
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">list = function (callback) {
+		var listUrl = &#x27;https://spreadsheets.google.com/feeds/spreadsheets/private/full&#x27;, that = this;
+
+		// do request for list of spreadsheets
+		if (!this.authId) {
+			return callback(&#x27;auth required&#x27;);
+		}
+
+		this.query({
+			url: listUrl
+		}, function(err, result) {
+			if (err) {
+				return callback(err);
+			}
+			var sheets = [];
+			for(var i=0; i &#x3c; result.feed.entry.length; i++) {
+				var entry = result.feed.entry[i],
+					sheet = that.parseSheet(entry);
+				sheets.push(sheet);
+			}
+			callback(null,sheets);
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	email: &#x3c;YOUR GOOGLE USERNAME&#x3e;,
+	password: &#x3c;YOUR GOOGLE PASS&#x3e;
+}, function(err) {
+	if (err) {
+		throw err;
+
+		// list spreadsheets in the account
+		gsheets.<span class="apidocCodeKeywordSpan">list</span>(function(err, sheets) {
+			// sheets is an array of Spreadsheet objects
+		});
+
+		// load a specific sheet
+		gsheets.getSpreadsheet(&#x3c;YOUR SPREADSHEET KEY HERE&#x3e;, function(err, sheet) {
+			if (err) {
+				throw err;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.logout" id="apidoc.element.google-sheets.logout">
+        function <span class="apidocSignatureSpan">google-sheets.</span>logout
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">logout = function () {
+		this.authId = null;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.parseSheet" id="apidoc.element.google-sheets.parseSheet">
+        function <span class="apidocSignatureSpan">google-sheets.</span>parseSheet
+        <span class="apidocSignatureSpan">(entry)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseSheet = function (entry) {
+		var sheet = {
+			lastModified: entry.updated,
+			url: entry.id,
+			author: {
+				name: entry.author.name,
+				email: entry.author.email
+			},
+			title: entry.title._
+		};
+		if (entry.link &#x26;&#x26; entry.link[1] &#x26;&#x26; entry.link[1].href &#x26;&#x26; entry.link[1].rel==&#x27;alternate&#x27;) {
+			var keyUrl = entry.link[1].href,
+				parsedUrl = url.parse(keyUrl,true);
+
+			sheet.key = parsedUrl.query.key;
+		}
+		sheet.id = entry.id.substring(entry.id.lastIndexOf(&#x27;/&#x27;)+1);
+		return new Spreadsheet(sheet, this.authId);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.query" id="apidoc.element.google-sheets.query">
+        function <span class="apidocSignatureSpan">google-sheets.</span>query
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">query = function (options, callback) {
+		request({
+			url: options.url,
+			method: options.method || &#x27;GET&#x27;,
+			body: options.body || null,
+			headers: {
+				&#x27;Authorization&#x27;: &#x27;GoogleLogin auth=&#x27; + this.authId
+			}
+		}, function(error, response, body) {
+			if (error) {
+				return callback(error);
+			}
+			var parser = new xml2js.Parser({
+				explicitArray: false,
+				async: true,
+				mergeAttrs: true
+			});
+			parser.parseString(body, function(err, result) {
+				callback(err, result);
+			});
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-sheets.Cells" id="apidoc.module.google-sheets.Cells">module google-sheets.Cells</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Cells.Cells" id="apidoc.element.google-sheets.Cells.Cells">
+        function <span class="apidocSignatureSpan">google-sheets.</span>Cells
+        <span class="apidocSignatureSpan">(data, authId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cells(data, authId) {
+	this.authId = authId;
+	this.cells = [];
+	this.colToHeaderMap = {};
+	this.headerToColMap = {};
+	this.rows = {};
+	this.parse(data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-sheets.Cells.prototype" id="apidoc.module.google-sheets.Cells.prototype">module google-sheets.Cells.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Cells.prototype.forEach" id="apidoc.element.google-sheets.Cells.prototype.forEach">
+        function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>forEach
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">forEach = function (callback) {
+		this.rows.forEach(callback);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+			// sheet is a Spreadsheet object....lets list all its worksheets
+			sheet.getWorksheets(function(err, worksheets) {
+				if (err) {
+					throw err;
+				}
+				// loop over the worksheets and print their titles
+				Array.<span class="apidocCodeKeywordSpan">forEach</span>(worksheets, function(worksheet) {
+					console.log(&#x27;Worksheet : &#x27; + worksheet.getTitle());
+				});
+
+				// set size of first worksheet
+				worksheets[0].set({
+					rows: 50,
+					cols: 50
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Cells.prototype.getCell" id="apidoc.element.google-sheets.Cells.prototype.getCell">
+        function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>getCell
+        <span class="apidocSignatureSpan">(row, col)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCell = function (row, col) {
+		row = row.toString();
+		if (this.rows[row]) {
+			return this.rows[row][this.colToHeaderMap[col.toString()]];
+		} else {
+			return null;
+		}
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Cells.prototype.getCells" id="apidoc.element.google-sheets.Cells.prototype.getCells">
+        function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>getCells
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCells = function () {
+		return this.cells;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Cells.prototype.getRow" id="apidoc.element.google-sheets.Cells.prototype.getRow">
+        function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>getRow
+        <span class="apidocSignatureSpan">(row)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRow = function (row) {
+		if (this.rows[row.toString()]) {
+			return this.rows[row.toString()];
+		} else {
+			return null;
+		}
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Cells.prototype.getRows" id="apidoc.element.google-sheets.Cells.prototype.getRows">
+        function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>getRows
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRows = function () {
+		return this.rows;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+					rows: 50,
+					cols: 50
+				});
+				// save it
+				worksheet[0].save(function(err, worksheet) {
+					// worksheet now refers to the updated worksheet object
+					// lets get its rows and add some new ones
+					worksheet.<span class="apidocCodeKeywordSpan">getRows</span>(function(err, rows) {
+						rows.create({
+							id: 1,
+							date: new Date().toUTCString(),
+							value: &#x27;A new value&#x27;
+						}, function(err, row) {
+							// now delete it again
+							rows.remove(row, function(err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Cells.prototype.numbersToLetters" id="apidoc.element.google-sheets.Cells.prototype.numbersToLetters">
+        function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>numbersToLetters
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">numbersToLetters = function (num) {
+		var base = &#x27;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#x27;, i, j = num, result = &#x27;&#x27;;
+		while (j &#x3e; 0) {
+			var index = j % base.length;
+			result = result + base[index - 1];
+			j = j - index;
+		}
+		return result;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Cells.prototype.parse" id="apidoc.element.google-sheets.Cells.prototype.parse">
+        function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>parse
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (data) {
+		var i = 0;
+
+		this.id = data.feed.id;
+
+		// loop over links
+		for (i=0; i &#x3c; data.feed.link.length; i++) {
+			if (data.feed.link[i].rel == &#x27;http://schemas.google.com/g/2005#post&#x27;) {
+				this.postUrl = data.feed.link[i].href;
+			}
+		}
+		this.startIndex = parseInt(data.feed[&#x27;openSearch:startIndex&#x27;],10);
+		this.rowCount = parseInt(data.feed[&#x27;gs:rowCount&#x27;], 10);
+		this.colCount = parseInt(data.feed[&#x27;gs:colCount&#x27;], 10);
+		if (data.feed[&#x27;openSearch:itemsPerPage&#x27;]) {
+			this.itemsPerPage = parseInt(data.feed[&#x27;openSearch:itemsPerPage&#x27;],10);
+		}
+
+		// loop over items and create Row objects
+		var entries = data.feed.entry;
+		var cells = [], cell;
+		if (Array.isArray(entries)) {
+			for (i=0; i &#x3c; entries.length; i++) {
+				var entry = entries[i];
+				cell = this.parseEntry(entry);
+				cells.push(cell);
+			}
+		} else if (entries) {
+			cell = this.parseEntry(entries);
+			cells.push(cell);
+		}
+		this.cells = cells;
+
+		var self = this;
+		this.cells.forEach(function(c) {
+			if (c.row === &#x27;1&#x27;) {
+				var normalizedHeader = c.data.toString().replace(/\s+/g, &#x27;&#x27;).toLowerCase();
+				self.colToHeaderMap[c.col] = normalizedHeader;
+				self.headerToColMap[normalizedHeader] = c.col;
+			}
+		});
+
+		this.cells.forEach(function(c) {
+			if (!self.rows[c.row]) {
+				self.rows[c.row] = {};
+			}
+			self.rows[c.row][self.colToHeaderMap[c.col]] = c;
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Cells.prototype.parseEntry" id="apidoc.element.google-sheets.Cells.prototype.parseEntry">
+        function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>parseEntry
+        <span class="apidocSignatureSpan">(entry)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseEntry = function (entry) {
+		var cell = {
+			id: entry.id,
+			lastModified: entry.updated,
+			title: entry.title._,
+			content: entry.content._,
+			data: {}
+		};
+		for (var k=0; k &#x3c; entry.link.length; k++) {
+			if (entry.link[k].rel == &#x27;edit&#x27;) {
+				cell.editUrl = entry.link[k].href;
+			}
+		}
+		for (var key in entry) {
+			if (key.indexOf(&#x27;gs:cell&#x27;)===0) {
+				if (!_.isEmpty(entry[key])) {
+					cell.data = entry[key]._;
+					cell.row = entry[key].row;
+					cell.col = entry[key].col;
+					cell.inputValue = entry[key].inputValue;
+				}
+			}
+		}
+		return cell;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Cells.prototype.query" id="apidoc.element.google-sheets.Cells.prototype.query">
+        function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>query
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">query = function (options, callback) {
+		request({
+			url: options.url,
+			method: options.method || &#x27;GET&#x27;,
+			body: options.body || null,
+			headers: _.extend(options.headers || {} , {
+				&#x27;Authorization&#x27;: &#x27;GoogleLogin auth=&#x27; + this.authId,
+				&#x27;Content-Type&#x27;: &#x27;application/atom+xml&#x27;,
+				&#x27;If-Match&#x27;: &#x27;*&#x27;
+			})
+		}, function(error, response, body) {
+			if (error) {
+				return callback(error);
+			}
+			var parser = new xml2js.Parser({
+				explicitArray: false,
+				async: true,
+				mergeAttrs: true
+			});
+			if (body) {
+				parser.parseString(body, function(err, result) {
+					if (err) {
+						return callback(body);
+					}
+					callback(err, result);
+				});
+			} else {
+				callback();
+			}
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Cells.prototype.update" id="apidoc.element.google-sheets.Cells.prototype.update">
+        function <span class="apidocSignatureSpan">google-sheets.Cells.prototype.</span>update
+        <span class="apidocSignatureSpan">(cells, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (cells, callback) {
+		if (!Array.isArray(cells)) {
+			cells = Object.keys(cells).map(function(k) {
+				return cells[k];
+			});
+		}
+		// modify a row, then pass it to this function to save it, only modifications to data info is allowed
+		var doc = builder.create(),
+			that = this;
+
+		var document = doc.begin(&#x27;feed&#x27;)
+				.att(&#x27;xmlns&#x27;,&#x27;http://www.w3.org/2005/Atom&#x27;)
+				.att(&#x27;xmlns:batch&#x27;,&#x27;http://schemas.google.com/gdata/batch&#x27;)
+				.att(&#x27;xmlns:gs&#x27;,&#x27;http://schemas.google.com/spreadsheets/2006&#x27;);
+		document.ele(&#x27;id&#x27;).txt(this.id).up();
+
+		cells.forEach(function(c) {
+			var batchId = &#x27;R&#x27; + c.row + &#x27;C&#x27; + c.col;
+			var entry = document.ele(&#x27;entry&#x27;);
+			if (c.title) {
+				entry.ele(&#x27;batch:id&#x27;).txt(c.title).up();
+			} else {
+				var title = that.numbersToLetters(parseInt(c.col, 10)) + c.row;
+				entry.ele(&#x27;batch:id&#x27;).txt(title).up();
+			}
+			entry.ele(&#x27;batch:operation&#x27;).att(&#x27;type&#x27;, &#x27;update&#x27;);
+			if (c.id) {
+				entry.ele(&#x27;id&#x27;).txt(c.id).up();
+			} else {
+				entry.ele(&#x27;id&#x27;).txt(that.id + &#x27;/&#x27; + batchId).up();
+			}
+			var editLink = entry.ele(&#x27;link&#x27;)
+				.att(&#x27;rel&#x27;, &#x27;edit&#x27;)
+				.att(&#x27;type&#x27;, &#x27;application/atom+xml&#x27;);
+			if (c.editUrl) {
+				editLink.att(&#x27;href&#x27;, c.editUrl);
+			} else {
+				editLink.att(&#x27;href&#x27;, that.id + &#x27;/&#x27; + batchId + &#x27;/version&#x27;);
+			}
+
+			entry.ele(&#x27;gs:cell&#x27;)
+				.att(&#x27;row&#x27;, c.row.toString())
+				.att(&#x27;col&#x27;, c.col.toString())
+				.att(&#x27;inputValue&#x27;, c.data);
+		});
+		// post to edit url
+		var url = this.id + &#x27;/batch&#x27;;
+		this.query({
+			url: url,
+			method: &#x27;POST&#x27;,
+			body: doc.toString()
+		}, function(err, data) {
+			if (err) {
+				return callback(err);
+			}
+			return callback(null);
+			// todo - really should update state based on result.
+			/*
+			var row = that.parseEntry(data.entry);
+			that.rows.push(row);
+			callback(null, row);
+			*/
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-sheets.Rows" id="apidoc.module.google-sheets.Rows">module google-sheets.Rows</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Rows.Rows" id="apidoc.element.google-sheets.Rows.Rows">
+        function <span class="apidocSignatureSpan">google-sheets.</span>Rows
+        <span class="apidocSignatureSpan">(data, authId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Rows(data, authId) {
+	this.authId = authId;
+	this.rows = [];
+	this.parse(data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-sheets.Rows.prototype" id="apidoc.module.google-sheets.Rows.prototype">module google-sheets.Rows.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Rows.prototype.create" id="apidoc.element.google-sheets.Rows.prototype.create">
+        function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>create
+        <span class="apidocSignatureSpan">(row, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (row, callback) {
+		// modify a row, then pass it to this function to save it, only modifications to data info is allowed
+		var doc = builder.create(),
+			that = this;
+
+		var document = doc.begin(&#x27;entry&#x27;)
+				.att(&#x27;xmlns&#x27;,&#x27;http://www.w3.org/2005/Atom&#x27;)
+				.att(&#x27;xmlns:gsx&#x27;,&#x27;http://schemas.google.com/spreadsheets/2006/extended&#x27;);
+
+		for (var key in row) {
+			var keyname = key.toLowerCase().replace(&#x27;[^a-z0-9]&#x27;,&#x27;&#x27;);
+			document.ele(&#x27;gsx:&#x27; + keyname)
+				.txt(row[key]);
+		}
+		// post to edit url
+		this.query({
+			url: this.postUrl,
+			method: &#x27;POST&#x27;,
+			body: doc.toString()
+		}, function(err, data) {
+			if (err) {
+				return callback(err);
+			}
+			var row = that.parseEntry(data.entry);
+			that.rows.push(row);
+			callback(null, row);
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+					cols: 50
+				});
+				// save it
+				worksheet[0].save(function(err, worksheet) {
+					// worksheet now refers to the updated worksheet object
+					// lets get its rows and add some new ones
+					worksheet.getRows(function(err, rows) {
+						rows.<span class="apidocCodeKeywordSpan">create</span>({
+							id: 1,
+							date: new Date().toUTCString(),
+							value: &#x27;A new value&#x27;
+						}, function(err, row) {
+							// now delete it again
+							rows.remove(row, function(err) {
+								// remove succeeded
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Rows.prototype.forEach" id="apidoc.element.google-sheets.Rows.prototype.forEach">
+        function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>forEach
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">forEach = function (callback) {
+		this.rows.forEach(callback);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+			// sheet is a Spreadsheet object....lets list all its worksheets
+			sheet.getWorksheets(function(err, worksheets) {
+				if (err) {
+					throw err;
+				}
+				// loop over the worksheets and print their titles
+				Array.<span class="apidocCodeKeywordSpan">forEach</span>(worksheets, function(worksheet) {
+					console.log(&#x27;Worksheet : &#x27; + worksheet.getTitle());
+				});
+
+				// set size of first worksheet
+				worksheets[0].set({
+					rows: 50,
+					cols: 50
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Rows.prototype.getRow" id="apidoc.element.google-sheets.Rows.prototype.getRow">
+        function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>getRow
+        <span class="apidocSignatureSpan">(index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRow = function (index) {
+		return this.rows[index];
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Rows.prototype.getRows" id="apidoc.element.google-sheets.Rows.prototype.getRows">
+        function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>getRows
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRows = function () {
+		return this.rows;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+					rows: 50,
+					cols: 50
+				});
+				// save it
+				worksheet[0].save(function(err, worksheet) {
+					// worksheet now refers to the updated worksheet object
+					// lets get its rows and add some new ones
+					worksheet.<span class="apidocCodeKeywordSpan">getRows</span>(function(err, rows) {
+						rows.create({
+							id: 1,
+							date: new Date().toUTCString(),
+							value: &#x27;A new value&#x27;
+						}, function(err, row) {
+							// now delete it again
+							rows.remove(row, function(err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Rows.prototype.parse" id="apidoc.element.google-sheets.Rows.prototype.parse">
+        function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>parse
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (data) {
+		var i = 0;
+
+		this.id = data.feed.id;
+
+		// loop over links
+		for (i=0; i &#x3c; data.feed.link.length; i++) {
+			if (data.feed.link[i].rel == &#x27;http://schemas.google.com/g/2005#post&#x27;) {
+				this.postUrl = data.feed.link[i].href;
+			}
+		}
+		this.totalResults = parseInt(data.feed[&#x27;openSearch:totalResults&#x27;],10);
+		this.startIndex = parseInt(data.feed[&#x27;openSearch:startIndex&#x27;],10);
+		if (data.feed[&#x27;openSearch:itemsPerPage&#x27;]) {
+			this.itemsPerPage = parseInt(data.feed[&#x27;openSearch:itemsPerPage&#x27;],10);
+		}
+
+		// loop over items and create Row objects
+		var entries = data.feed.entry;
+		var rows = [], row;
+		if (Array.isArray(entries)) {
+			for (i=0; i &#x3c; entries.length; i++) {
+				var entry = entries[i];
+				row = this.parseEntry(entry);
+				rows.push(row);
+			}
+		} else if (entries) {
+			row = this.parseEntry(entries);
+			rows.push(row);
+		}
+		this.rows = rows;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Rows.prototype.parseEntry" id="apidoc.element.google-sheets.Rows.prototype.parseEntry">
+        function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>parseEntry
+        <span class="apidocSignatureSpan">(entry)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseEntry = function (entry) {
+		if (!entry.id) {
+			return null;
+		}
+
+		var row = {
+			id: entry.id,
+			lastModified: entry.updated,
+			title: entry.title._,
+			content: entry.content._,
+			data: {}
+		};
+		for (var k=0; k &#x3c; entry.link.length; k++) {
+			if (entry.link[k].rel == &#x27;edit&#x27;) {
+				row.editUrl = entry.link[k].href;
+			}
+		}
+		for (var key in entry) {
+			if (key.indexOf(&#x27;gsx:&#x27;)===0) {
+				var rowName = key.substr(&#x27;gsx:&#x27;.length);
+				if (!_.isEmpty(entry[key])) {
+					row.data[rowName] = entry[key];
+				}
+			}
+		}
+		return row;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Rows.prototype.query" id="apidoc.element.google-sheets.Rows.prototype.query">
+        function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>query
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">query = function (options, callback) {
+		request({
+			url: options.url,
+			method: options.method || &#x27;GET&#x27;,
+			body: options.body || null,
+			headers: _.extend(options.headers || {} , {
+				&#x27;Authorization&#x27;: &#x27;GoogleLogin auth=&#x27; + this.authId,
+				&#x27;Content-Type&#x27;: &#x27;application/atom+xml&#x27;
+			})
+		}, function(error, response, body) {
+			if (error) {
+				return callback(error);
+			}
+			var parser = new xml2js.Parser({
+				explicitArray: false,
+				async: true,
+				mergeAttrs: true
+			});
+			if (body) {
+				parser.parseString(body, function(err, result) {
+					if (err) {
+						return callback(body);
+					}
+					callback(err, result);
+				});
+			} else {
+				callback();
+			}
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Rows.prototype.remove" id="apidoc.element.google-sheets.Rows.prototype.remove">
+        function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>remove
+        <span class="apidocSignatureSpan">(row, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (row, callback) {
+		var that = this;
+		this.query({
+			url: row.id,
+			method: &#x27;GET&#x27;
+		}, function(err, rowData) {
+			var entry = that.parseEntry(rowData.entry);
+			that.query({
+				url: entry.editUrl,
+				method: &#x27;DELETE&#x27;
+			}, function(err) {
+				if (err) {
+					return callback(err);
+				}
+				callback();
+			});
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+					worksheet.getRows(function(err, rows) {
+						rows.create({
+							id: 1,
+							date: new Date().toUTCString(),
+							value: &#x27;A new value&#x27;
+						}, function(err, row) {
+							// now delete it again
+							rows.<span class="apidocCodeKeywordSpan">remove</span>(row, function(err) {
+								// remove succeeded
+							});
+						});
+					});
+				});
+			});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Rows.prototype.save" id="apidoc.element.google-sheets.Rows.prototype.save">
+        function <span class="apidocSignatureSpan">google-sheets.Rows.prototype.</span>save
+        <span class="apidocSignatureSpan">(row, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">save = function (row, options, callback) {
+		if (typeof options === &#x27;function&#x27;) {
+			callback = options;
+			options = {};
+		}
+		// modify a row, then pass it to this function to save it, only modifications to data info is allowed
+		if (!row.editUrl || !row.id) {
+			return this.create(row, callback);
+		}
+
+		var doc = builder.create(),
+			that = this;
+
+		var document = doc.begin(&#x27;entry&#x27;)
+				.att(&#x27;xmlns&#x27;,&#x27;http://www.w3.org/2005/Atom&#x27;)
+				.att(&#x27;xmlns:gsx&#x27;,&#x27;http://schemas.google.com/spreadsheets/2006/extended&#x27;)
+			.ele(&#x27;id&#x27;)
+				.txt(row.id)
+				.up();
+		for (var key in row.data) {
+			if (row.data[key]) {
+				document.ele(&#x27;gsx:&#x27; + key)
+					.txt(row.data[key]);
+			}
+		}
+		// post to edit url
+		this.query(_.extend(options, {
+			url: row.editUrl,
+			method: &#x27;PUT&#x27;,
+			body: doc.toString()
+		}), function(err, data) {
+			if (err) {
+				return callback(err);
+			}
+			var row = that.parseEntry(data.entry);
+			if (!row) {
+				return callback(new Error(&#x27;Unable to save result - no id &#x27; + (data.entry || &#x27;&#x27;).toString().slice(0, 300)));
+			} else {
+				callback(null, row);
+			}
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+				// set size of first worksheet
+				worksheets[0].set({
+					rows: 50,
+					cols: 50
+				});
+				// save it
+				worksheet[0].<span class="apidocCodeKeywordSpan">save</span>(function(err, worksheet) {
+					// worksheet now refers to the updated worksheet object
+					// lets get its rows and add some new ones
+					worksheet.getRows(function(err, rows) {
+						rows.create({
+							id: 1,
+							date: new Date().toUTCString(),
+							value: &#x27;A new value&#x27;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-sheets.Spreadsheet" id="apidoc.module.google-sheets.Spreadsheet">module google-sheets.Spreadsheet</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Spreadsheet.Spreadsheet" id="apidoc.element.google-sheets.Spreadsheet.Spreadsheet">
+        function <span class="apidocSignatureSpan">google-sheets.</span>Spreadsheet
+        <span class="apidocSignatureSpan">(meta, authId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Spreadsheet(meta, authId) {
+	this.meta = meta;
+	this.authId = authId;
+	this.worksheets = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-sheets.Spreadsheet.prototype" id="apidoc.module.google-sheets.Spreadsheet.prototype">module google-sheets.Spreadsheet.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Spreadsheet.prototype.addWorksheet" id="apidoc.element.google-sheets.Spreadsheet.prototype.addWorksheet">
+        function <span class="apidocSignatureSpan">google-sheets.Spreadsheet.prototype.</span>addWorksheet
+        <span class="apidocSignatureSpan">(data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addWorksheet = function (data, callback) {
+		var worsheet = null;
+
+		if (data instanceof Worksheet) {
+			// just add it to our array, and tell worksheet to save
+			data.meta.spreadsheetId = this.meta.id;
+			worksheet = data;
+		} else if (typeof data === &#x27;object&#x27;) {
+			data.spreadsheetId = this.meta.id;
+			worksheet = new Worksheet(data, this.authId);
+		}
+
+		this.worksheets.push(worksheet);
+		worksheet.save(callback);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Spreadsheet.prototype.deleteWorksheet" id="apidoc.element.google-sheets.Spreadsheet.prototype.deleteWorksheet">
+        function <span class="apidocSignatureSpan">google-sheets.Spreadsheet.prototype.</span>deleteWorksheet
+        <span class="apidocSignatureSpan">(worksheet, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteWorksheet = function (worksheet, callback) {
+		if (!(worksheet instanceof Worksheet)) {
+			callback(&#x27;Not a worksheet instance&#x27;);
+		} else {
+			worksheet.remove(callback);
+		}
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Spreadsheet.prototype.getWorksheet" id="apidoc.element.google-sheets.Spreadsheet.prototype.getWorksheet">
+        function <span class="apidocSignatureSpan">google-sheets.Spreadsheet.prototype.</span>getWorksheet
+        <span class="apidocSignatureSpan">(name, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getWorksheet = function (name, callback) {
+		this.getWorksheets(function(err, worksheets) {
+			if (err) {
+				return callback(err);
+			}
+			for (var i=0; i &#x3c; worksheets.length; i++) {
+				if (worksheets[i].getTitle()===name) {
+					return callback(null, worksheets[i]);
+				}
+			}
+			return callback(&#x27;no worksheet with title &#x27; + name);
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Spreadsheet.prototype.getWorksheetAt" id="apidoc.element.google-sheets.Spreadsheet.prototype.getWorksheetAt">
+        function <span class="apidocSignatureSpan">google-sheets.Spreadsheet.prototype.</span>getWorksheetAt
+        <span class="apidocSignatureSpan">(index, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getWorksheetAt = function (index, callback) {
+		this.getWorksheets(function(err, worksheets) {
+			if (err) {
+				return callback(err);
+			}
+			if (index &#x3e;= worksheets.length) {
+				return callback(&#x27;index out of range, only &#x27; + worksheets.length + &#x27; worksheets in this spreadsheet&#x27;);
+			}
+			callback(null, worksheets[index]);
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Spreadsheet.prototype.getWorksheets" id="apidoc.element.google-sheets.Spreadsheet.prototype.getWorksheets">
+        function <span class="apidocSignatureSpan">google-sheets.Spreadsheet.prototype.</span>getWorksheets
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getWorksheets = function (callback) {
+		var that = this;
+		this.query({
+			url: makeUrl(&#x27;worksheets&#x27;,this.meta.id)
+		}, function(err, result) {
+			if (err) {
+				return callback(err);
+			}
+			var worksheets = [];
+			
+			if ( Array.isArray(result.feed.entry) === false ) {
+				result.feed.entry = [result.feed.entry];
+			}
+
+      function addEntry (entry) {
+			  var worksheet = new Worksheet({spreadsheetId: that.meta.id},that.authId);
+    		worksheet.parseJSON(entry);
+    		worksheets.push(worksheet);
+      }
+      if (typeof result.feed.entry.length === &#x27;number&#x27;) {
+  			for(var i=0; i &#x3c; result.feed.entry.length; i++) {
+  				addEntry(result.feed.entry[i]);
+  			}
+      } else {
+        addEntry(result.feed.entry);
+      }
+
+			that.worksheets = worksheets;
+			callback(null, worksheets);
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		// load a specific sheet
+		gsheets.getSpreadsheet(&#x3c;YOUR SPREADSHEET KEY HERE&#x3e;, function(err, sheet) {
+			if (err) {
+				throw err;
+			}
+
+			// sheet is a Spreadsheet object....lets list all its worksheets
+			sheet.<span class="apidocCodeKeywordSpan">getWorksheets</span>(function(err, worksheets) {
+				if (err) {
+					throw err;
+				}
+				// loop over the worksheets and print their titles
+				Array.forEach(worksheets, function(worksheet) {
+					console.log(&#x27;Worksheet : &#x27; + worksheet.getTitle());
+				});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Spreadsheet.prototype.query" id="apidoc.element.google-sheets.Spreadsheet.prototype.query">
+        function <span class="apidocSignatureSpan">google-sheets.Spreadsheet.prototype.</span>query
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">query = function (options, callback) {
+		request({
+			url: options.url,
+			method: options.method || &#x27;GET&#x27;,
+			body: options.body || null,
+			headers: {
+				&#x27;Authorization&#x27;: &#x27;GoogleLogin auth=&#x27; + this.authId,
+				&#x27;Content-Type&#x27;: &#x27;application/atom+xml&#x27;
+			}
+		}, function(error, response, body) {
+			if (error) {
+				return callback(error);
+			}
+			var parser = new xml2js.Parser({
+				explicitArray: false,
+				async: true,
+				mergeAttrs: true
+			});
+			parser.parseString(body, function(err, result) {
+				callback(err, result);
+			});
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-sheets.Worksheet" id="apidoc.module.google-sheets.Worksheet">module google-sheets.Worksheet</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Worksheet.Worksheet" id="apidoc.element.google-sheets.Worksheet.Worksheet">
+        function <span class="apidocSignatureSpan">google-sheets.</span>Worksheet
+        <span class="apidocSignatureSpan">(meta, authId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Worksheet(meta, authId) {
+	this.meta = meta;
+	this.authId = authId;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-sheets.Worksheet.prototype" id="apidoc.module.google-sheets.Worksheet.prototype">module google-sheets.Worksheet.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Worksheet.prototype.create" id="apidoc.element.google-sheets.Worksheet.prototype.create">
+        function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>create
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (callback) {
+		var that = this;
+
+		this.query({
+			url: makeUrl(&#x27;worksheets&#x27;,this.meta.spreadsheetId),
+			method: &#x27;POST&#x27;,
+			body: this.createXML()
+		}, function(err, data) {
+			if (err) {
+				return callback(err);
+			}
+			that.parseJSON(data.entry);
+			callback(null, that);
+		});
+
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+					cols: 50
+				});
+				// save it
+				worksheet[0].save(function(err, worksheet) {
+					// worksheet now refers to the updated worksheet object
+					// lets get its rows and add some new ones
+					worksheet.getRows(function(err, rows) {
+						rows.<span class="apidocCodeKeywordSpan">create</span>({
+							id: 1,
+							date: new Date().toUTCString(),
+							value: &#x27;A new value&#x27;
+						}, function(err, row) {
+							// now delete it again
+							rows.remove(row, function(err) {
+								// remove succeeded
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Worksheet.prototype.createXML" id="apidoc.element.google-sheets.Worksheet.prototype.createXML">
+        function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>createXML
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createXML = function () {
+		var doc = builder.create(),
+			options = {
+				title: this.meta.title || &#x27;Untitled Worksheet&#x27;,
+				rows: this.meta.rows || 50,
+				cols: this.meta.cols || 10
+			};
+
+		doc.begin(&#x27;entry&#x27;)
+				.att(&#x27;xmlns&#x27;,&#x27;http://www.w3.org/2005/Atom&#x27;)
+				.att(&#x27;xmlns:gs&#x27;,&#x27;http://schemas.google.com/spreadsheets/2006&#x27;)
+			.ele(&#x27;title&#x27;)
+				.txt(options.title)
+				.up()
+			.ele(&#x27;gs:rowCount&#x27;)
+				.txt(&#x22;&#x22;+options.rows)
+				.up()
+			.ele(&#x27;gs:colCount&#x27;)
+				.txt(&#x22;&#x22;+options.cols);
+		return doc.toString();
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Worksheet.prototype.getCells" id="apidoc.element.google-sheets.Worksheet.prototype.getCells">
+        function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>getCells
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCells = function (options, callback) {
+		if (typeof options === &#x27;function&#x27;) {
+			callback = options;
+			options = {};
+		}
+
+		if (options.minRow) {
+			options[&#x27;min-row&#x27;] = options.minRow;
+			delete options.minRow;
+		}
+		if (options.maxRow) {
+			options[&#x27;max-row&#x27;] = options.maxRow;
+			delete options.maxRow;
+		}
+
+		if (options.minCol) {
+			options[&#x27;min-col&#x27;] = options.minCol;
+			delete options.minCol;
+		}
+		if (options.maxCol) {
+			options[&#x27;max-col&#x27;] = options.maxCol;
+			delete options.maxCol;
+		}
+
+		var that = this,
+			url =  makeUrl(&#x27;cells&#x27;, this.meta.spreadsheetId, this.meta.id) + &#x27;?&#x27; + querystring.stringify(options);
+
+		this.query({
+			url:url,
+			method: &#x27;GET&#x27;
+		}, function(err, data) {
+			if (err) {
+				return callback(err);
+			}
+
+			// parse rows into row objects we can update and save in the worksheet
+			var cells = new Cells(data, that.authId);
+			that.cells = cells;
+			callback(null, cells);
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Worksheet.prototype.getRows" id="apidoc.element.google-sheets.Worksheet.prototype.getRows">
+        function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>getRows
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRows = function (options, callback) {
+		if (typeof options === &#x27;function&#x27;) {
+			callback = options;
+			options = {};
+		}
+
+		if (options.orderby) {
+			options.orderby = &#x27;gsx:&#x27; + options.orderby;
+		}
+		var sq = null;
+		if (options.sq) {
+			sq = options.sq;
+			delete options.sq;
+		}
+
+		var that = this,
+			url =  makeUrl(&#x27;list&#x27;, this.meta.spreadsheetId, this.meta.id) + &#x27;?&#x27; + querystring.stringify(options);
+
+		if (sq) {
+			sq = encodeURIComponent(sq);
+			sq = sq.replace(&#x27;%3E&#x27;, &#x27;&#x3e;&#x27;).replace(&#x27;%3C&#x27;,&#x27;&#x3c;&#x27;);
+			url += &#x27;&#x26;sq=&#x27; + sq;
+		}
+
+		this.query({
+			url:url,
+			method: &#x27;GET&#x27;
+		}, function(err, data) {
+			if (err) {
+				return callback(err);
+			}
+
+			// parse rows into row objects we can update and save in the worksheet
+			var rows = new Rows(data, that.authId);
+			that.rows = rows;
+			callback(null, rows);
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+					rows: 50,
+					cols: 50
+				});
+				// save it
+				worksheet[0].save(function(err, worksheet) {
+					// worksheet now refers to the updated worksheet object
+					// lets get its rows and add some new ones
+					worksheet.<span class="apidocCodeKeywordSpan">getRows</span>(function(err, rows) {
+						rows.create({
+							id: 1,
+							date: new Date().toUTCString(),
+							value: &#x27;A new value&#x27;
+						}, function(err, row) {
+							// now delete it again
+							rows.remove(row, function(err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Worksheet.prototype.getTitle" id="apidoc.element.google-sheets.Worksheet.prototype.getTitle">
+        function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>getTitle
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTitle = function () {
+		return this.meta.title;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			// sheet is a Spreadsheet object....lets list all its worksheets
+			sheet.getWorksheets(function(err, worksheets) {
+				if (err) {
+					throw err;
+				}
+				// loop over the worksheets and print their titles
+				Array.forEach(worksheets, function(worksheet) {
+					console.log(&#x27;Worksheet : &#x27; + worksheet.<span class="apidocCodeKeywordSpan">getTitle</span>());
+				});
+
+				// set size of first worksheet
+				worksheets[0].set({
+					rows: 50,
+					cols: 50
+				});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Worksheet.prototype.parseJSON" id="apidoc.element.google-sheets.Worksheet.prototype.parseJSON">
+        function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>parseJSON
+        <span class="apidocSignatureSpan">(entry)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseJSON = function (entry) {
+		var worksheet = {
+			lastModified: entry.updated,
+			title: entry.title._,
+			url: entry.id,
+			rows: parseInt(entry[&#x27;gs:rowCount&#x27;],10),
+			cols: parseInt(entry[&#x27;gs:colCount&#x27;],10)
+		};
+		// parse id from url
+		worksheet.id = worksheet.url.substr(worksheet.url.lastIndexOf(&#x27;/&#x27;)+1);
+		// loop over links
+		for (var i=0; i &#x3c; entry.link.length; i++) {
+			if (entry.link[i].rel===&#x27;edit&#x27;) {
+				worksheet.editUrl = entry.link[i].href;
+			}
+		}
+		this.meta = _.extend(this.meta, worksheet);
+		return this.meta;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Worksheet.prototype.query" id="apidoc.element.google-sheets.Worksheet.prototype.query">
+        function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>query
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">query = function (options, callback) {
+		request({
+			url: options.url,
+			method: options.method || &#x27;GET&#x27;,
+			body: options.body || null,
+			headers: {
+				&#x27;Authorization&#x27;: &#x27;GoogleLogin auth=&#x27; + this.authId,
+				&#x27;Content-Type&#x27;: &#x27;application/atom+xml&#x27;
+			}
+		}, function(error, response, body) {
+			if (error) {
+				return callback(error);
+			}
+			if (body!==undefined) {
+				var parser = new xml2js.Parser({
+					explicitArray: false,
+					async: true,
+					mergeAttrs: true
+				});
+				parser.parseString(body, function(err, result) {
+					if (err) {
+						// if an error occurred in the parsing, we can assume we got a non-xml result from google
+						// pass that error back instead
+						return callback(body);
+					}
+					callback(err, result);
+				});
+			} else {
+				callback();
+			}
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Worksheet.prototype.remove" id="apidoc.element.google-sheets.Worksheet.prototype.remove">
+        function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>remove
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (callback) {
+		this.query({
+			url: this.meta.editUrl,
+			method: &#x27;DELETE&#x27;
+		}, function(err) {
+			callback(err);
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+					worksheet.getRows(function(err, rows) {
+						rows.create({
+							id: 1,
+							date: new Date().toUTCString(),
+							value: &#x27;A new value&#x27;
+						}, function(err, row) {
+							// now delete it again
+							rows.<span class="apidocCodeKeywordSpan">remove</span>(row, function(err) {
+								// remove succeeded
+							});
+						});
+					});
+				});
+			});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Worksheet.prototype.save" id="apidoc.element.google-sheets.Worksheet.prototype.save">
+        function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>save
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">save = function (callback) {
+		if (!this.meta.editUrl) {
+			// create instead
+			return this.create(callback);
+		}
+		// otherwise save to edit url
+
+		var that = this,
+			xml = this.saveXML();
+
+		this.query({
+			url: this.meta.url,
+			method: &#x27;GET&#x27;
+		}, function(err, entryData) {
+			var entry = that.parseJSON(entryData.entry);
+			that.query({
+				url: entry.editUrl,
+				method: &#x27;PUT&#x27;,
+				body: xml
+			}, function(err, data) {
+				if (err) {
+					return callback(err);
+				}
+				that.parseJSON(data.entry);
+				callback(null, that);
+			});
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+				// set size of first worksheet
+				worksheets[0].set({
+					rows: 50,
+					cols: 50
+				});
+				// save it
+				worksheet[0].<span class="apidocCodeKeywordSpan">save</span>(function(err, worksheet) {
+					// worksheet now refers to the updated worksheet object
+					// lets get its rows and add some new ones
+					worksheet.getRows(function(err, rows) {
+						rows.create({
+							id: 1,
+							date: new Date().toUTCString(),
+							value: &#x27;A new value&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Worksheet.prototype.saveXML" id="apidoc.element.google-sheets.Worksheet.prototype.saveXML">
+        function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>saveXML
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">saveXML = function () {
+		var doc = builder.create();
+
+		doc.begin(&#x27;entry&#x27;)
+				.att(&#x27;xmlns&#x27;,&#x27;http://www.w3.org/2005/Atom&#x27;)
+				.att(&#x27;xmlns:gs&#x27;,&#x27;http://schemas.google.com/spreadsheets/2006&#x27;)
+			.ele(&#x27;id&#x27;)
+				.txt(this.meta.url)
+				.up()
+			.ele(&#x27;title&#x27;)
+				.att(&#x27;type&#x27;, &#x27;text&#x27;)
+				.txt(this.meta.title)
+				.up()
+			.ele(&#x27;gs:rowCount&#x27;)
+				.txt(&#x22;&#x22;+this.meta.rows)
+				.up()
+			.ele(&#x27;gs:colCount&#x27;)
+				.txt(&#x22;&#x22;+this.meta.cols);
+		return doc.toString();
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Worksheet.prototype.set" id="apidoc.element.google-sheets.Worksheet.prototype.set">
+        function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>set
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (options) {
+		this.meta = _.extend(this.meta, options);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				}
+				// loop over the worksheets and print their titles
+				Array.forEach(worksheets, function(worksheet) {
+					console.log(&#x27;Worksheet : &#x27; + worksheet.getTitle());
+				});
+
+				// set size of first worksheet
+				worksheets[0].<span class="apidocCodeKeywordSpan">set</span>({
+					rows: 50,
+					cols: 50
+				});
+				// save it
+				worksheet[0].save(function(err, worksheet) {
+					// worksheet now refers to the updated worksheet object
+					// lets get its rows and add some new ones
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.Worksheet.prototype.setTitle" id="apidoc.element.google-sheets.Worksheet.prototype.setTitle">
+        function <span class="apidocSignatureSpan">google-sheets.Worksheet.prototype.</span>setTitle
+        <span class="apidocSignatureSpan">(title)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setTitle = function (title) {
+		this.meta.title = title;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.google-sheets.auth" id="apidoc.module.google-sheets.auth">module google-sheets.auth</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.google-sheets.auth.authorize" id="apidoc.element.google-sheets.auth.authorize">
+        function <span class="apidocSignatureSpan">google-sheets.auth.</span>authorize
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authorize = function (options, callback) {
+	var googleAuth = new GoogleClientLogin({
+		email: options.email,
+		password: options.password,
+		service: &#x27;spreadsheets&#x27;,
+		accountType: GoogleClientLogin.accountTypes.google
+	});
+	googleAuth.on(GoogleClientLogin.events.login, function(){
+		// do things with google services
+		callback(null, googleAuth.getAuthId());
+	});
+	googleAuth.on(GoogleClientLogin.events.error, function(e) {
+		switch(e.message) {
+			case GoogleClientLogin.errors.loginFailed:
+				if (this.isCaptchaRequired()) {
+					return callback(&#x27;captcha required&#x27;, {
+						error: &#x27;Process captcha then recall function with captcha and token parameters&#x27;,
+						captchaUrl: this.getCaptchaUrl(),
+						captchaToken: this.getCaptchaToken()
+					});
+				}
+				break;
+			case GoogleClientLogin.errors.tokenMissing:
+			case GoogleClientLogin.errors.captchaMissing:
+				return callback(&#x27;captcha missing&#x27;, {error: &#x27;You must pass the both captcha token and the captcha&#x27;});
+		}
+		callback(&#x27;unkown error&#x27;,{error: &#x27;Unknown error in GoogleClientLogin.&#x27;});
+	});
+	var captcha = undefined;
+	if (options.captcha) {
+		captcha = {logincaptcha: options.captcha, logintoken: options.token};
+	}
+	googleAuth.login(captcha);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
