@@ -1,4 +1,7 @@
-# api documentation for  [google-sheets (v0.0.7)](https://github.com/benjamind/google-sheets)  [![npm package](https://img.shields.io/npm/v/npmdoc-google-sheets.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-google-sheets) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-google-sheets.svg)](https://travis-ci.org/npmdoc/node-npmdoc-google-sheets)
+# npmdoc-google-sheets
+
+#### api documentation for  [google-sheets (v0.0.7)](https://github.com/benjamind/google-sheets)  [![npm package](https://img.shields.io/npm/v/npmdoc-google-sheets.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-google-sheets) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-google-sheets.svg)](https://travis-ci.org/npmdoc/node-npmdoc-google-sheets)
+
 #### Read and modify Google Spreadsheets
 
 [![NPM](https://nodei.co/npm/google-sheets.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/google-sheets)
@@ -73,7 +76,8 @@
     "scripts": {
         "test": "nodeunit ./tests/index.js"
     },
-    "version": "0.0.7"
+    "version": "0.0.7",
+    "bin": {}
 }
 ```
 
